@@ -1,0 +1,58 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+*.log
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# LatentCode runtime
+.sdlc/checkpoints/*
+.sdlc/logs/*
+.sdlc/traces/*
+.sdlc/workspace.db
+.sdlc/workspace.db-journal
+.sdlc/.version
+.sdlc/index/*
+.sdlc/memory/*
+!sdlc/index/.gitkeep
+!sdlc/logs/.gitkeep
+!sdlc/traces/.gitkeep
+!sdlc/checkpoints/.gitkeep
+!sdlc/memory/.gitkeep
+
+# Per-repo scan output (example targets + any user repo)
+**/.latentcode/
+
+# OpenCode IDE cache
+.opencode/
+
+# Test caches
+.pytest_cache/
+
+# Python build artifacts (these match the top-level dirs only, not scripts/build/)
+*.egg-info/
+/build/
+/dist/
+
+# Local secrets / config
+.env
+.env.local
+*.local
+
+# Demo video build artifacts (keep scripts/build/final/latentcode_demo.mp4 tracked)
+# .cast files ARE the source of truth and must be tracked
+# Keep: scripts/build/cast/  (the recordings)
+# Ignore: scripts/build/slides/, scripts/build/segments/ (regenerable intermediates)
+scripts/build/slides/
+scripts/build/segments/
+# User-recorded demo video (lives in repo root, not tracked)
+demo_video.mp4
